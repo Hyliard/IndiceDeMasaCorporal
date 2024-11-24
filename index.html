@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets/images/Gaming Logo.png" type="image/x-icon">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    </head>
+</head>
+<body class="dark">
+    <header class="header">
+        <div class="logo">
+          <!-- Logo header  -->
+            <a href="/" class="logo-link">
+                <img src="assets/images/Gaming Logo.png" alt="Logo" class="logo-img">
+            </a>
+        </div>
+      <!-- links a navegar  -->
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="https://hyliard.github.io/Portafolio/" target="_blank" rel="noopener" class="nav-link">Portfolio</a></li>
+                <li><a href="https://hyliard.github.io/Cifradorcesar.github.io/" target="_blank" rel="noopener" class="nav-link">Cifrado Cesar</a></li>
+                <li><a href="https://hyliard.github.io/CalculadoraResponsiva/" target="_blank" rel="noopener" class="nav-link">Calculadora</a></li>
+               <!-- <li><a href="/contact" class="nav-link">Contacto</a></li> -->
+            </ul>
+        </nav>
+        <!-- switches de tema  -->
+        <div class="switches">
+          <div id="toggle-theme" class="toggle-theme">
+              <img id="toggle-icon" src="assets/icons/moon.svg" alt="icon theme" class="toggle-theme__icon"/>
+              <p id="toggle-text" class="toggle-theme__text">Dark Mode</p>
+          </div>
+      </div>
+    </header>
+    
+    <div class="container">
+        <h2>Calculadora de IMC</h2>
+        <form id="imcForm" onsubmit="event.preventDefault(); calculateIMC();">
+            <label for="gender">Género:</label>
+            <select id="gender" required>
+                <option value="male">Hombre</option>
+                <option value="female">Mujer</option>
+            </select>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" placeholder="Edad en años" required>
+
+            <label for="height">Tamaño (cm):</label>
+            <input type="number" id="height" placeholder="Altura en centímetros" required>
+
+            <label for="weight">Peso (kg):</label>
+            <input type="number" id="weight" placeholder="Peso en kilogramos" required>
+
+            <button type="submit">Calcular IMC</button>
+        </form>
+
+        <div class="result" id="result"></div>
+    </div>
+
+
+
+    <div class="container-footer">
+        <footer>
+            <!-- Logo del pie de página -->
+            <div class="logo-footer">
+              <img src="assets/images/Gaming Logo.png" alt="Logo de Gaming de Hyliard" />
+            </div>
+            <!-- Enlaces a redes sociales -->
+            <div class="redes-footer">
+              <a href="https://www.linkedin.com/in/luis-gerardo-martinez-03898582/" target="_blank" rel="noopener" aria-label="LinkedIn de Luis Gerardo Martínez">
+                <i class="fab fa-linkedin-in icon-redes"></i>
+              </a>
+              <a href="https://github.com/Hyliard" target="_blank" rel="noopener" aria-label="GitHub de Hyliard">
+                <i class="fab fa-github icon-redes"></i>
+              </a>
+              <a href="https://www.twitch.tv/hyliard" target="_blank" rel="noopener" aria-label="Twitch de Hyliard">
+                <i class="fab fa-twitch icon-redes"></i>
+              </a>
+            </div>
+            <!-- Separador horizontal -->
+            <hr />
+            <p>&copy; 2024 Hyliard. Todos los derechos reservados.</p>
+            <h4>Luis Gerardo Martínez Hernández</h4>
+        </footer>    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
